@@ -1,15 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 
+/* E:/WebDev/PROYECTOS/interactive-pricing-component-main */
+
 body { 
-    background-color: hsl(223, 50%, 87%);
+    background-color: hsl(230, 100%, 99%);
     font-family: Manrope;
     max-width:1440px;
     width: 100%;
     }
 
+main{
+    width: 40%;
+    margin: 3em auto;
+      
+    }
+
 header {
-    width: 50%;
+    
+margin-bottom: 4em;
+    
+position: relative;
+    
+color: hsl(227, 35%, 25%);
+    
+text-align: center;
+    
+}
+
+header h1 {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+header p {
+    font-size: 14px;
+}
+
+header img {
+    position: absolute;
+    left: 37%;
+    bottom: -57%;
+    }
+
+header .headertext {
+    position: relative;}
+
+article {
     margin: auto;
-    color: hsl(227, 35%, 25%);
-    text-align: center;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: -1px 6px 27px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 6px 27px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 6px 27px 0px rgba(0,0,0,0.75);
+padding: 2.5em;
+}
+
+article p {
+    display: inline-block;
+    width: 49%;
+}
+
+article input {
+    width: 100%;
 }

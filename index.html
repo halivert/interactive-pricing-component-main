@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="/css/style.css">
     <title>Interactive pricing component</title>
   </head>
@@ -13,22 +14,28 @@
 
       <main>
         <header>
-          <img src="./images/pattern-circles.svg" />
-          <h1>Simple, traffic-based pricing</h1>
-          <h2>
-            Sign-up for our 30-day trial. No credit card required.
-          </h2>
+          <div class="header"><img src="./images/pattern-circles.svg" /></div>
+          <div class="headertext">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>
+              Sign-up for our 30-day trial. No credit card required.
+            </p>
+          </div>
         </header>
 
         <article v-scope>
-          <p>
-            <strong>{{ selectedPrice.views }} Pageviews</strong>
+          <p class="pageviews">
+            {{ selectedPrice.views }} Pageviews
           </p>
-          <input type="range" min="0" max="4" v-model="price" />
+         
           <p><strong>$ {{ finalPrice }}</strong> /month</p>
+          <input type="range" min="0" max="4" v-model="price" />
+
 
           <small>Monthly Billing</small>
           <input type="checkbox" name="yearly" v-model="yearly" />
+
+
           <small>Yearly Billing</small>
 
           <small>25% <span>discount</span></small>
