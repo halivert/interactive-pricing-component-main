@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+   
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <title>Interactive pricing component</title>
   </head>
 
@@ -24,34 +25,54 @@
         </header>
 
         <article v-scope>
-          <p class="pageviews">
-            {{ selectedPrice.views }} Pageviews
-          </p>
-         
-          <p><strong>$ {{ finalPrice }}</strong> /month</p>
-          <input type="range" min="0" max="4" v-model="price" />
+
+          <div class="row">
+            <div class="pageviews">
+              <p>
+                {{ selectedPrice.views }} Pageviews
+              </p>
+            </div>
+
+            <div class="price">
+              <p><span>$ {{ finalPrice }}</span> /month</p>
+            </div>
+          </div>
 
 
-          <small>Monthly Billing</small>
-          <input type="checkbox" name="yearly" v-model="yearly" />
+         <input class="slider" type="range" min="0" max="4" v-model="price" />
 
 
-          <small>Yearly Billing</small>
-
-          <small>25% <span>discount</span></small>
-
-          <ul>
-            <li>Unlimited websites</li>
-            <li>100% data ownership</li>
-            <li>Email reports</li>
-          </ul>
-          <a href="#trial">
-            Start my trial
-          </a>
+          <div class="row">
+            <p>Monthly Billing</p>
+           
+            <input class="checkbox" type="checkbox" name="yearly" v-model="yearly" />
+            
+            <p>Yearly Billing</p>
+            
+            <p class="discount">25% discount</p>
+          </div>
+          
+          
+          <div class="row">
+  
+            <ul>
+              <li>Unlimited websites</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+            <a href="#trial">
+              Start my trial
+            </a>
+          
+          
+          </div>
         </article>
 
         
       </main>
+
+    
+      </div>
 
       <footer>
         <p>
@@ -61,10 +82,14 @@
             href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8"
             target="_blank"
             >Frontend Mentor</a
-          >. Coded by <a href="https://halivert.dev">Halí</a>.
+          >. Coded by <a href="https://halivert.dev">Halí</a> & <a href="https://github.com/Janselin">MaryF</a>.
         </p>
       </footer>
-    </div>
+
+
+
+
     <script type="module" src="/ts/main.ts"></script>
+
   </body>
 </html>
