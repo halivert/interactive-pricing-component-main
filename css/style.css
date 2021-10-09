@@ -36,11 +36,13 @@ header h1, span {
 
 span {
     font-size: 40px;
+   
 }
 
 header p {
        margin-top: -37px;
-       font-size: 15px;
+       font-size: 14px;
+     
 }
 
 article {
@@ -59,6 +61,7 @@ article .row {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1em;
+    flex-wrap: nowrap;
     }
 
 article .pageviews {
@@ -67,13 +70,14 @@ article .pageviews {
         letter-spacing: 3px;
             }
 
-article .row2, .slider-container  {
+article .row2 {
         width: 100%;
         vertical-align: top;
         display: flex;
         margin-bottom: 4em;
         justify-content: right;
         align-items: center;
+        flex-wrap: nowrap;
         }
 
 .monthly, .yearly {
@@ -88,6 +92,7 @@ article .row2, .slider-container  {
    border-radius: 8px;
    width: 100%;
    display: block;
+   margin-bottom: 4em;
   }
 
 .slider::-webkit-slider-thumb  {
@@ -102,6 +107,17 @@ article .row2, .slider-container  {
     background-repeat: no-repeat;
     cursor: pointer;   
      opacity: 1; 
+     box-shadow: 0px 18px 8px -1px rgba(122,234,221,0.3);
+-webkit-box-shadow: 0px 18px 8px -1px rgba(122,234,221,0.3);
+-moz-box-shadow: 0px 18px 8px -1px rgba(122,234,221,0.3);
+  }
+
+.slider::-webkit-slider-thumb:hover {
+    background-color: #7AEADD;
+  }
+
+.slider::-webkit-slider-thumb:active {
+    background-color: hsl(174, 82%, 35%); 
   }
 
 /* mozilla version */
@@ -120,23 +136,14 @@ article .row2, .slider-container  {
     cursor: pointer;  
   }
 
-.slider::-webkit-slider-thumb:hover {
-    background-color: #7AEADD;
-  }
-
 .slider::-moz-range-thumb:hover {
     background-color: #7AEADD;
-  }
-
-.slider::-webkit-slider-thumb:active {
-    background-color: hsl(174, 82%, 35%); 
   }
 
 .slider::-moz-range-thumb:active
   {
     background-color: hsl(174, 77%, 80%);
   }
-
 
 input[type=checkbox]{
         height: 0;
@@ -211,24 +218,109 @@ ul {
     }
 
 .btn {
-               background-color:hsl(227, 35%, 25%);
-               border-radius:36px;
-               display:inline-block;
-               cursor:pointer;
-               padding: 13px 44px;
-               text-decoration:none;
-               color: hsl(226, 100%, 87%);
+    background-color:hsl(227, 35%, 25%);
+    border-radius:36px;
+    display:inline-block;
+    cursor:pointer;
+    padding: 13px 44px;
+    text-decoration:none;
+    color: hsl(226, 100%, 87%);
     }
 
 .btn:hover {
-        color:hsl(0, 0%, 100%);
+    color:hsl(0, 0%, 100%);
     }
-
 
 footer {
     text-align: center;
 }
 
 footer a, footer a:active, footer a:visited {
-    color: hsl(174, 82%, 35%); ;
+    color: hsl(174, 82%, 35%); 
 }
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    main {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+header {
+    display: flex;
+    flex-direction: column;  
+    height: 200px; 
+
+  }
+
+header h1 {
+    font-size: 25px;
+}
+
+header p {
+
+    margin: -41px auto;
+    display: inline-block;
+    width: 193px;
+    text-align: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1.3em;
+    height: 476px;
+    margin-top: -42px;
+}
+
+.row {  
+    display: flex; 
+    flex-direction: column;
+    margin: 0;    
+    height: 20px;
+}
+
+.row2 {
+    margin: 5.2em 0;
+}
+
+.price {
+    margin-top: 2.3em;
+}
+
+
+.slider {
+    margin-top: -28px;
+}
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 740px) {
+    
+    main {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+}
+
+@media screen and (min-width: 741px) and (max-width: 1200px) {
+   
+    main {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+}
+
+
