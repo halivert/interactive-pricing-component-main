@@ -21,7 +21,7 @@ jobs:
       - name: Build JS files
         run: |
           npm i
-          npm build -- --base=janselin.github.io/interactive-pricing-component-main
+          npm run build -- --base=https://janselin.github.io/interactive-pricing-component-main
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
