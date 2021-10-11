@@ -2,26 +2,28 @@
 
 
 body { 
-    background-color: hsl(230, 100%, 99%);
+    background: hsl(230, 100%, 99%)
+    url(../images/bg-pattern.svg)
+    no-repeat top;
     font-family: Manrope;
     max-width:1440px;  
     width: 100%;
     font-size: 13px;
     color:hsl(225, 20%, 60%);
+    overflow: hidden;
     }
 
 main {
     width: 40%;
-    margin: 3em auto; 
-      
+    margin: 3em auto;       
     }
 
 header {
     margin-bottom: 3em;
     height: 146px;
     text-align: center;
-    background: url(/images/pattern-circles.svg) no-repeat
-    center;  
+    background: url(/images/pattern-circles.svg) 
+    no-repeat center;  
  }
 
 header h1, span {
