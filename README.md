@@ -45,9 +45,9 @@ Users should be able to:
 
 
 ### What I learned
-This is my first collaboration with another dev. In this proyect I learned a lot of new things, first of all I learned how to work on a project already built with a JS Framework. 
+This is my first collaboration with another dev. In this project I learned a lot of new things, first of all I learned how to work on a project already built with a JS Framework. 
 Also learned how to add css styles to the imput range+ imput checkbox, and kept practising on the responsive design.
-This was definitely the most challenging proyect i've ever worked on.
+This was definitely the most challenging project i've ever worked on.
 
 
 ### Continued development
